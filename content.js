@@ -16,7 +16,7 @@ chrome.runtime.onMessage.addListener(({from, subject}, sender, response) => {
         let resultHTML = "";
         for (let i = 0; i < buttons.snapshotLength; i++) {
             const xpath = getFullXPath(buttons.snapshotItem(i)).toLowerCase();
-            resultHTML += "<li class=\"li-xpath\">" + `Button ${i + 1}: ${xpath}` + "</li>";
+            resultHTML += "<li class=\"li-xpath\">" + `Button ${i + 1}: <br> ${xpath}` + "</li>";
         }
 
         response({result: resultHTML});
